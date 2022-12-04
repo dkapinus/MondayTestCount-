@@ -1,0 +1,15 @@
+.fon {
+    background-color: #282c34;
+    height: 400px;
+}
+
+.score {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-top: 15px;
+}
+
+.error {
+    color: red;
+}
