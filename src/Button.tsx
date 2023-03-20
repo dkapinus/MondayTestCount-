@@ -1,26 +1,19 @@
 import React from 'react';
+import s from "./Counter.module.css";
 
-type ButtonPropsType = {
-    name: string;
-    started: () => void;
-    disabled?: boolean;
+type ButtonType = {
+    onClick: () => void
+    disable?: boolean
+    name:string
 }
 
 
-const ButtonStyle = {
-    color: 'blue',
-    height: '30px',
-    width: '50px',
-    borderRadius: '8px',
-    fontFamily: "Monotype Corsiva",
-    fontSize: '20px',
-    fontStyle: 'italic',
-}
+export const Button = (props: ButtonType) => {
 
-
-export const Button = (props: ButtonPropsType) => {
     return (
-        <button style={ButtonStyle} disabled={props.disabled} onClick={props.started}>{props.name}</button>
+        <>
+   <button onClick={props.onClick} disabled={props.disable} className={s.button}>{props.name}</button>
+        </>
     );
 };
 
